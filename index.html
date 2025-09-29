@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MUNAFER's Portfolio</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 4px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#6366f1',
+            'bg-dark': '#0f172a',
+            'card-bg': '#1e293b'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-bg-dark text-gray-100">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-bg-dark/90 backdrop-blur-md shadow-lg">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-extrabold text-accent tracking-wide">MUNAFER ALI</a>
+      <div class="hidden md:flex space-x-8 font-medium">
+        <a href="#work" class="hover:text-accent transition">Work</a>
+        <a href="#about" class="hover:text-accent transition">About</a>
+        <a href="#contact" class="hover:text-accent transition">Contact</a>
+      </div>
+      <a href="#contact" class="md:hidden bg-accent hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition shadow-lg">Hire</a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Hero -->
+    <section id="home" class="py-20 text-center">
+      <p class="text-accent text-sm sm:text-lg font-semibold uppercase tracking-[0.2em] mb-4">Graphic Designer & Brand Builder</p>
+      <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight mb-6">
+        <span class="block text-gray-50">Crafting Visual Stories</span>
+        <span class="block text-accent">That Convert.</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-10">
+        Focused on high-impact visual design, dynamic branding, and strategic marketing materials. Let's create something unforgettable.
+      </p>
+      <a href="#work" class="bg-accent hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-xl text-lg shadow-xl transition transform hover:scale-105">
+        View Latest Projects
+      </a>
+    </section>
+
+    <!-- Divider -->
+    <div class="h-px bg-gray-700 my-16"></div>
+
+    <!-- Work -->
+    <section id="work" class="pb-20">
+      <h2 class="text-4xl font-bold text-center text-gray-50 mb-12">Featured Work</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Project 1 -->
+        <div class="group bg-card-bg rounded-xl overflow-hidden shadow-lg hover:shadow-accent/50 transition transform hover:-translate-y-2 cursor-pointer"
+          data-src="photos/IMG_4102.PNG" data-type="image" onclick="openModal(this)">
+          <img src="photos/IMG_4102.PNG" alt="Pizza Hunt Promotional Ad" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+          <div class="p-5">
+            <h3 class="text-lg font-semibold mb-2">Pizza Hunt - Promotional Ad</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Food Marketing</span>
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Social Media</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="group bg-card-bg rounded-xl overflow-hidden shadow-lg hover:shadow-accent/50 transition transform hover:-translate-y-2 cursor-pointer"
+          data-src="photos/IMG_4108.PNG" data-type="image" onclick="openModal(this)">
+          <img src="photos/IMG_4108.PNG" alt="Sports Car Vector Illustration" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+          <div class="p-5">
+            <h3 class="text-lg font-semibold mb-2">Sports Car Vector Illustration</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Vector Art</span>
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Automotive</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="group bg-card-bg rounded-xl overflow-hidden shadow-lg hover:shadow-accent/50 transition transform hover:-translate-y-2 cursor-pointer"
+          data-src="photos/IMG_4109.PNG" data-type="image" onclick="openModal(this)">
+          <img src="photos/IMG_4109.PNG" alt="Downhills Championship Poster" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+          <div class="p-5">
+            <h3 class="text-lg font-semibold mb-2">Downhills Championship Poster</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Event Promotion</span>
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Illustration</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="group bg-card-bg rounded-xl overflow-hidden shadow-lg hover:shadow-accent/50 transition transform hover:-translate-y-2 cursor-pointer"
+          data-src="photos/IMG_4121.MP4" data-type="video" onclick="openModal(this)">
+          <div class="w-full h-64 flex items-center justify-center bg-gray-900 text-gray-400 group-hover:text-accent transition">
+            ▶️ Nature
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold mb-2">Nature Ad (Video)</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Motion Graphics</span>
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">10s Clip</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="group bg-card-bg rounded-xl overflow-hidden shadow-lg hover:shadow-accent/50 transition transform hover:-translate-y-2 cursor-pointer"
+          data-src="photos/IMG_4123.PNG" data-type="image" onclick="openModal(this)">
+          <img src="photos/IMG_4123.PNG" alt="Real Estate Banner" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+          <div class="p-5">
+            <h3 class="text-lg font-semibold mb-2">Real Estate Sales Banner</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Property Branding</span>
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Sales Material</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="group bg-card-bg rounded-xl overflow-hidden shadow-lg hover:shadow-accent/50 transition transform hover:-translate-y-2 cursor-pointer"
+          data-src="photos/IMG_4117.MP4" data-type="video" onclick="openModal(this)">
+          <div class="w-full h-64 flex items-center justify-center bg-gray-900 text-gray-400 group-hover:text-accent transition">
+            ▶️ Lemon SQueez
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold mb-2">(Video)</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Environmental Design</span>
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Motion Graphics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="group bg-card-bg rounded-xl overflow-hidden shadow-lg hover:shadow-accent/50 transition transform hover:-translate-y-2 cursor-pointer"
+          data-src="photos/IMG_4122.MP4" data-type="video" onclick="openModal(this)">
+          <div class="w-full h-64 flex items-center justify-center bg-gray-900 text-gray-400 group-hover:text-accent transition">
+            ▶️ MILk Ad
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold mb-2">Milk Ad (Video)</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Environmental Design</span>
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Motion Graphics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="group bg-card-bg rounded-xl overflow-hidden shadow-lg hover:shadow-accent/50 transition transform hover:-translate-y-2 cursor-pointer"
+          data-src="photos/IMG_4114.MP4" data-type="image" onclick="openModal(this)">
+          <img src="photos/IMG_4108.PNG" alt="Sports Car Vector Illustration" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+          <div class="p-5">
+            <h3 class="text-lg font-semibold mb-2">Sports Car Vector Illustration</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Vector Art</span>
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Automotive</span>
+            </div>
+          </div>
+        </div>
+        <!-- Project 9 (Photo) -->
+        <div class="group bg-card-bg rounded-xl overflow-hidden shadow-lg hover:shadow-accent/50 transition transform hover:-translate-y-2 cursor-pointer"
+          data-src="photos/IMG_4114.PNG" data-type="image" onclick="openModal(this)">
+          <img src="photos/IMG_4114.PNG" alt="Creative Poster Design" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+          <div class="p-5">
+            <h3 class="text-lg font-semibold mb-2">Interntional flight</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Poster</span>
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Branding</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 10 (Photo) -->
+        <div class="group bg-card-bg rounded-xl overflow-hidden shadow-lg hover:shadow-accent/50 transition transform hover:-translate-y-2 cursor-pointer"
+          data-src="photos/IMG_4124.PNG" data-type="image" onclick="openModal(this)">
+          <img src="photos/IMG_4124.PNG" alt="Minimal Business Card" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+          <div class="p-5">
+            <h3 class="text-lg font-semibold mb-2">Tiger cave</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Identity</span>
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Print Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 11 (Video) -->
+        <div class="group bg-card-bg rounded-xl overflow-hidden shadow-lg hover:shadow-accent/50 transition transform hover:-translate-y-2 cursor-pointer"
+          data-src="photos/IMG_4126.MP4" data-type="video" onclick="openModal(this)">
+          <div class="w-full h-64 flex items-center justify-center bg-gray-900 text-gray-400 group-hover:text-accent transition">
+            ▶️ Creative Ad
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold mb-2"></h3>Guardian of the galaxy Ad (Video)</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Motion Graphics</span>
+              <span class="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs">Advertising</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-card-bg py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-4 text-center text-gray-400 text-sm">
+      <p>&copy; 2024 MUNAFER ALI. All rights reserved. | Graphic Design Portfolio</p>
+      <p class="mt-2">Designed with passion and coded with Tailwind CSS.</p>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="projectModal" class="hidden fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4" onclick="closeModal(event)">
+    <div id="modalContentWrapper" class="relative max-w-5xl w-full max-h-[90vh]">
+      <button onclick="closeModal(event)" class="absolute top-4 right-4 text-white text-3xl font-bold p-2 hover:text-accent transition bg-black/40 rounded-full w-10 h-10 flex items-center justify-center">
+        &times;
+      </button>
+      <div id="modalMediaContainer" class="flex items-center justify-center"></div>
+    </div>
+  </div>
+  
+
+  <script>
+    function openModal(element) {
+      const modal = document.getElementById('projectModal');
+      const mediaContainer = document.getElementById('modalMediaContainer');
+      const src = element.getAttribute('data-src');
+      const type = element.getAttribute('data-type');
+
+      mediaContainer.innerHTML = '';
+      let media;
+
+      if (type === 'image') {
+        media = document.createElement('img');
+        media.src = src;
+        media.alt = 'Project Preview';
+        media.className = 'rounded-lg max-h-[85vh] shadow-lg';
+      } else if (type === 'video') {
+        media = document.createElement('video');
+        media.src = src;
+        media.controls = true;
+        media.autoplay = true;
+        media.loop = true;
+        media.className = 'rounded-lg max-h-[85vh] shadow-lg';
+      }
+
+      mediaContainer.appendChild(media);
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(event) {
+      const modal = document.getElementById('projectModal');
+      if (event.target === modal || event.target.closest('button')) {
+        const video = document.getElementById('modalMediaContainer').querySelector('video');
+        if (video) video.pause();
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+  </script>
+</body>
+</html>
